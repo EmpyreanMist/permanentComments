@@ -11,6 +11,7 @@ const port = 5080;
 // Middleware to handle incoming request data
 app.use(bodyParser.json()); // Parses JSON data from requests
 app.use(bodyParser.urlencoded({ extended: true })); // Parses form data (x-www-form-urlencoded)
+app.use(express.static('public'));
 
 // Connect to MongoDB FIRST before defining routes
 mongoose.connect('mongodb://localhost:27017/commentDB');
