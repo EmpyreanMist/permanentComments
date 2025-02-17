@@ -1,6 +1,8 @@
+const API_URL = 'https://permanentcomments.onrender.com/'; // Replace with your real Render URL
+
 // Fetch comments from the backend and display them
 async function loadComments() {
-  const response = await fetch('/comments');
+  const response = await fetch(`${API_URL}/comments`);
   const comments = await response.json();
 
   const commentsContainer = document.getElementById('commentsContainer');
@@ -11,7 +13,7 @@ async function loadComments() {
           <p>${comment.text}</p>
           <small>${new Date(comment.timestamp).toLocaleString()}</small>
       </div>
-  `
+    `
     )
     .join('');
 }
@@ -25,7 +27,7 @@ document
     const commentInput = document.getElementById('commentInput').value.trim();
     if (!commentInput) return;
 
-    await fetch('/add-comment', {
+    await fetch(`${API_URL}/add-comment`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ text: commentInput }),
