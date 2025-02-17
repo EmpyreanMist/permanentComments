@@ -26,3 +26,31 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#submitButton {
+  width: 10rem;
+  height: 10rem;
+  background-color: green;
+  font-size: 30px;
+}
+
+#commentInput {
+  width: 30rem;
+  height: 10rem;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+#commentsContainer {
+  font-size: 30px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.comment {
+  font-size: 30px;
+  margin-bottom: 0;
+}

@@ -14,7 +14,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parses form data (x-www-f
 app.use(express.static('public'));
 
 // Connect to MongoDB FIRST before defining routes
-mongoose.connect('mongodb://localhost:27017/commentDB');
+mongoose.connect(
+  'mongodb+srv://christianfryksten1:AuJWg2Cc1POX9RME@commentcluster.pdmgt.mongodb.net/?retryWrites=true&w=majority&appName=commentCluster'
+);
 
 // Connection event listeners
 const db = mongoose.connection;
